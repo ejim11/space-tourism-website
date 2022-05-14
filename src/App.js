@@ -4,7 +4,8 @@ import Header from "./Components/MainHeader/Header";
 import { Routes, Route, Navigate } from "react-router-dom";
 import LoadingSpinner from "./Components/UI/LoadingSpinner";
 
-const Home = React.lazy(() => import("./pages/Home"));
+import Home from "./pages/Home";
+
 const Crew = React.lazy(() => import("./pages/Crew"));
 const Destination = React.lazy(() => import("./pages/Destination"));
 const Technology = React.lazy(() => import("./pages/Technology"));
