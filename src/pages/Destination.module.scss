@@ -1,0 +1,14 @@
+@import "../scss/base";
+@import "../scss/mixin";
+
+.destination {
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+
+  @include respond(tablet) {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  @include respond(phone) {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+}

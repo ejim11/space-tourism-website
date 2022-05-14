@@ -1,0 +1,17 @@
+@import "../../scss/mixin";
+
+.card {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  padding-top: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // overflow-y: hidden;
+
+  // @include respond(phone) {
+  //   height: auto;
+  // }
+}

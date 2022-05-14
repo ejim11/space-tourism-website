@@ -1,0 +1,165 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+@import "../../scss/animation";
+
+.header {
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+
+  @include respond(phone) {
+    padding-top: 0;
+    height: 10rem;
+  }
+
+  &__line {
+    background-color: rgba($color-secondary-1, 0.1);
+    height: 0.1rem;
+    margin-right: -2rem;
+    width: 65rem;
+
+    @include respond(bigLaptop) {
+      width: 55rem;
+    }
+
+    @include respond(laptop) {
+      width: 40rem;
+    }
+
+    @include respond(tablet) {
+      width: 20rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    background-color: $color-secondary-2;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 4rem 0 3rem;
+  }
+
+  &__nav {
+    display: flex;
+    height: 6rem;
+    flex: 1;
+
+    @include respond(phone) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100vh;
+      //background: rgba(255, 255, 255, 0.04);
+      //backdrop-filter: blur(100%);
+      background: rgba($color-primary, 0.99);
+      flex-direction: column;
+      padding: 1.5rem 0;
+      animation: slideMenuIn ease 500ms;
+    }
+
+    & ul {
+      display: flex;
+      flex: 1;
+      list-style-type: none;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(81.5485px);
+      justify-content: space-around;
+      padding: 0 6rem;
+
+      @include respond(phone) {
+        flex-direction: column;
+        justify-content: flex-start;
+        background: transparent;
+        backdrop-filter: none;
+        padding: 2rem;
+      }
+    }
+
+    & ul li {
+      display: flex;
+      color: $color-secondary-2;
+
+      @include respond(phone) {
+        margin-bottom: 2rem;
+        color: $color-secondary-1;
+      }
+
+      &:hover {
+        border-bottom: solid 2px $color-secondary-1;
+        @include respond(phone) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    & ul li a {
+      text-decoration: none;
+      color: currentColor;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+
+      & span {
+        font-weight: 100;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        margin-left: 0.4rem;
+      }
+    }
+  }
+}
+
+.header__nav ul li a.active {
+  border-bottom: solid 2px $color-secondary-1;
+
+  @include respond(phone) {
+    border-bottom: none;
+    color: $color-secondary-2;
+  }
+}
+
+.menuLogo {
+  width: 4rem;
+  height: 4rem;
+  fill: $color-secondary-1;
+  display: none;
+  margin-left: auto;
+  margin-right: 3rem;
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.crossLogo {
+  width: 4rem;
+  height: 4rem;
+  fill: $color-secondary-1;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  display: none;
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.hide {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.visible {
+  @include respond(phone) {
+    display: flex;
+  }
+}

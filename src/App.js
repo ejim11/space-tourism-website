@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import React, { Suspense } from "react";
+import Header from "./Components/MainHeader/Header";
+import { Routes, Route, Navigate } from "react-router-dom";
+import LoadingSpinner from "./Components/UI/LoadingSpinner";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const Crew = React.lazy(() => import("./pages/Crew"));
+const Destination = React.lazy(() => import("./pages/Destination"));
+const Technology = React.lazy(() => import("./pages/Technology"));
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Suspense
+        fallback={
+          <div className="loader">
+            <LoadingSpinner />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/Destination" element={<Destination />} />
+          <Route path="/Crew" element={<Crew />} />
+          <Route path="/Technology" element={<Technology />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

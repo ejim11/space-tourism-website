@@ -1,0 +1,14 @@
+@import "../scss/base";
+@import "../scss/mixin";
+
+.crew {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+
+  @include respond(tablet) {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+
+  @include respond(phone) {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+  }
+}

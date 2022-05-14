@@ -1,0 +1,15 @@
+@import "../scss/base";
+@import "../scss/mixin";
+
+.technology {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+
+  @include respond(tablet){
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+
+
+  @include respond(phone){
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+  }
+}

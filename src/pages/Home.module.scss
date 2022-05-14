@@ -1,0 +1,118 @@
+@import "../scss/base";
+@import "../scss/mixin";
+@import "../scss/animation";
+
+.home {
+  background-image: url("../assets/home/background-home-desktop.jpg");
+
+  @include respond(tablet) {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+
+  @include respond(phone) {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+
+  & section {
+    display: flex;
+    padding: 0 6rem;
+    height: 40rem;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      padding: 8rem 4rem;
+      height: 90vh;
+    }
+
+    @include respond(phone) {
+      padding: 8rem 2rem;
+      height: 100vh;
+    }
+
+    & .first {
+      display: flex;
+      flex-direction: column;
+      flex: 15%;
+      color: $color-secondary-2;
+      font-family: $font-text;
+      padding: 0 4rem 6rem 8rem;
+      justify-content: flex-end;
+
+      @include respond(tablet) {
+        justify-content: flex-start;
+        text-align: center;
+        padding: 6rem 10rem 0 10rem;
+      }
+
+      @include respond(phone) {
+        padding: 4rem 0 0 0;
+      }
+
+      &-paragraph {
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        font-weight: 100;
+        animation: showParagraph 4s ease;
+      }
+
+      &-title {
+        font-family: $font-heading;
+        font-size: 10rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        animation: titleAnimation 6s ease;
+      }
+
+      &-text {
+        font-size: 1.7rem;
+        font-weight: 100;
+        animation: showParagraph 4s ease;
+      }
+    }
+
+    & .second {
+      display: flex;
+      flex: 40%;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0 6rem 6rem 0;
+
+      @include respond(tablet) {
+        flex: 1;
+        justify-content: center;
+        padding: 0;
+      }
+
+      &-explore {
+        width: 23rem;
+        height: 23rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        background-color: rgba($color-secondary-2, 0.2);
+
+        & a {
+          background-color: $color-secondary-2;
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-family: $font-heading;
+          width: 23rem;
+          height: 23rem;
+          display: flex;
+          border-radius: 100%;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s;
+          color: $color-primary;
+          text-decoration: none;
+
+          &:hover {
+            transform: scale(0.65);
+          }
+        }
+      }
+    }
+  }
+}
