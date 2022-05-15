@@ -1,5 +1,6 @@
 @import "../../scss/base";
 @import "../../scss/mixin";
+@import "../../scss/animation";
 
 .destination {
   color: $color-secondary-2;
@@ -19,6 +20,8 @@
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     font-weight: 100;
+    animation: titleAnimation 6s ease;
+    -webkit-animation: titleAnimation 6s ease;
 
     & span {
       color: $color-secondary-1;
@@ -88,6 +91,7 @@
       &-text {
         font-size: 1.7rem;
         font-weight: 100;
+        animation: showParagraph 4s ease;
       }
     }
   }

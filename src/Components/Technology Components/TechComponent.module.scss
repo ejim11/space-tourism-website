@@ -1,5 +1,6 @@
 @import "../../scss/base";
 @import "../../scss/mixin";
+@import "../../scss/animation";
 
 .techSection {
   padding: 2rem 0rem 0rem 12rem;
@@ -15,6 +16,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     font-weight: 100;
+    animation: titleAnimation 6s ease;
 
     @include respond(tablet) {
       order: 1;

@@ -1,7 +1,9 @@
 @import "../../scss/base";
 @import "../../scss/mixin";
+@import "../../scss/animation";
 
 .crewSection {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, min-content);
@@ -24,6 +26,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     font-weight: 100;
+    animation: titleAnimation 6s ease;
 
     @include respond(phone) {
       text-align: center;

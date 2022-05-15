@@ -21,12 +21,11 @@
     @include respond(tablet) {
       flex-direction: column;
       padding: 8rem 4rem;
-      height: 90vh;
+      height: auto;
     }
 
     @include respond(phone) {
       padding: 8rem 2rem;
-      height: 100vh;
     }
 
     & .first {
@@ -81,6 +80,7 @@
         flex: 1;
         justify-content: center;
         padding: 0;
+        margin-top: 3rem;
       }
 
       &-explore {
