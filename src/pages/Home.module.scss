@@ -15,8 +15,7 @@
 
   & section {
     display: flex;
-    padding: 0 6rem;
-    height: 40rem;
+    padding: 4rem 6rem;
 
     @include respond(tablet) {
       flex-direction: column;
@@ -25,17 +24,17 @@
     }
 
     @include respond(phone) {
-      padding: 8rem 2rem;
+      padding: 8rem 2rem 4rem 2rem;
     }
 
     & .first {
       display: flex;
       flex-direction: column;
-      flex: 15%;
+      flex: 30%;
       color: $color-secondary-2;
       font-family: $font-text;
       padding: 0 4rem 6rem 8rem;
-      justify-content: flex-end;
+      justify-content: center;
 
       @include respond(tablet) {
         justify-content: flex-start;

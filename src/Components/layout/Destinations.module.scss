@@ -120,6 +120,10 @@
       width: 100%;
       text-align: center;
       margin-top: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 1.5rem;
+      }
     }
 
     & span {
